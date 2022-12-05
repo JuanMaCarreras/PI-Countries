@@ -5,7 +5,7 @@ module.exports = (sequelize) => {
     sequelize.define('activity', {
         id: {
             type: DataTypes.INTEGER,
-            primatyKey: true,
+            primaryKey: true,
             allowNull: false
         },
 
