@@ -19,10 +19,14 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const { getApiCountries } = require('./src/routes/loadDB/loadDb')
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+conn.sync({ force: true }).then(() => {     //se sincroniza con los models  / force elimina las tablas y la vuelve a crear usando los models
+  server.listen(3001, async () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
+
+    await getApiCountries()
+
   });
 });
