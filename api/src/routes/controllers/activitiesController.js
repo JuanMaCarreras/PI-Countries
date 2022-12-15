@@ -5,7 +5,6 @@ const createActivity = async (req, res) => {
 
     const { name, difficulty, duration, season, countryid } = req.body
 
-
     try {
 
         const countryFound = await Country.findAll({
