@@ -8,13 +8,13 @@ function Card({ flag, name, continent, id }) {
         <>
             <Link to={`/countries/${id}`}>
                 <div className={style.cardContainer}>
-                    <div>
+                    <div className={style.cardImg}>
                         <img src={flag} alt='img not found'></img>
                     </div>
 
                     <h2 className={style.cardName}>Name:  {name}</h2>
 
-                    <h3>Continent:  {continent}</h3>
+                    <h3 className={style.cardContinent}>Continent:  {continent}</h3>
 
                 </div>
             </Link>
