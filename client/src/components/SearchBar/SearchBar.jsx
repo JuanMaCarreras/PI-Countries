@@ -30,8 +30,6 @@ function SearchBar() {
                         placeholder='Search Country'
                         name='input'
                         onChange={e => inputHandler(e)}
-
-
                     />
                 </div>
 
