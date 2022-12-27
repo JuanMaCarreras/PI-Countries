@@ -27,7 +27,7 @@ function SearchBar() {
                 <div>
                     <input className={style.input}
                         type="text"
-                        placeholder='Search Country'
+                        placeholder='Search... '
                         name='input'
                         onChange={e => inputHandler(e)}
                     />
