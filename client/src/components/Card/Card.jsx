@@ -12,9 +12,9 @@ function Card({ flag, name, continent, id }) {
                         <img src={flag} alt='img not found'></img>
                     </div>
 
-                    <h2 className={style.cardName}>Name:  {name}</h2>
+                    <h2 className={style.cardName}>Name: {name}</h2>
 
-                    <h3 className={style.cardContinent}>Continent:  {continent}</h3>
+                    <h3 className={style.cardContinent}>Continent: {continent}</h3>
 
                 </div>
             </Link>
