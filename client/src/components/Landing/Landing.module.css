@@ -1,0 +1,22 @@
+.imgContainer {
+    background-image: url('./world-140304.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.title {
+    color: rgb(191, 191, 191);
+    -webkit-text-stroke: 1px rgb(30, 30, 30);
+}
+
+.btn {
+    color: rgb(191, 191, 191);
+    border-color: rgb(191, 191, 191);
+    background-color: transparent;
+    font-size: 25px;
+    border-radius: 8px;
+    transition: transform 2s ease;
+    margin-top: 450px;
+}
