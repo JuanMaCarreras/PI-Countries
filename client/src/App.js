@@ -4,7 +4,6 @@ import Landing from './components/Landing/Landing.jsx';
 import Home from './components/Home/Home'
 import NavBar from './components/NavBar/NavBar';
 import Form from './components/Form/Form'
-//pruba
 import CardDetail from './components/CardDetail/CardDetail';
 
 
