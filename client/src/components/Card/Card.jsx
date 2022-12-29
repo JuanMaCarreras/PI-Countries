@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Card({ flag, name, continent, id }) {
     return (
         <>
-            <Link to={`/countries/${id}`}>
+            <Link to={`/countries/detail/${id}`}>
                 <div className={style.cardContainer}>
                     <div className={style.cardImg}>
                         <img src={flag} alt='img not found'></img>
