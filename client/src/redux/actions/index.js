@@ -11,7 +11,7 @@ import {
 } from './types'
 
 
-export const getCountes = () => {
+export const getCountries = () => {
     return async (dispatch) => {
         const axiosRes = await axios.get('http://localhost:3001/countries')
         const res = axiosRes.data
