@@ -48,16 +48,15 @@ const getCountriesById = async (req, res) => {
 
     try {
 
-        const idCountry = await Country.findOne({
-            where: {
-                id,
-            },
+        const idCountry = await Country.findByPk(
+            id, {
             include: Activity,
         });
 
         if (idCountry.length === 0) {
             return res.status(404).json({ error: 'Country not found' })
         }
+
         return res.status(200).send(idCountry)
 
 
