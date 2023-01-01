@@ -13,33 +13,37 @@ function CardDetail() {
     const { id } = useParams()
     // console.log(useParams())
 
-    const detail = useSelector(state => state.details)
+    const detailsCountry = useSelector(state => state.details)
 
 
     useEffect(() => {
         dispatch(getDetails(id))
     }, [dispatch, id])
 
+    const [details] = detailsCountry
+
+
     return (
         <>
             <div className={style.detailContainer}>
                 <div>
-                    {id ? < div >
+                    {
+                        details ? < div >
 
-                        <div className={style.flagContainer}>
-                            <img src={detail.flag} alt="img not found" />
-                        </div>
+                            <div className={style.flagContainer}>
+                                <img src={details.flag} alt="img not found" />
+                            </div>
 
-                        <h1 className={style.name} > Name: {detail.name}</h1>
-                        <h3 className={style.id} > {detail.id}</h3>
+                            <h1 className={style.name} > Name: {details.name}</h1>
+                            <h3 className={style.id} > {details.id}</h3>
 
-                        <h5 className={style.Cont}> Continent: {detail.continent}</h5>
-                        <h5 className={style.Cap}> Capital: {detail.capital}</h5>
-                        <h5 className={style.subregion}> Subregion: {detail.subregion}</h5>
-                        <h5 className={style.area}> Area: {detail.area} km2</h5>
-                        <h5 className={style.poblation}> Poblation: {detail.poblation} km2</h5>
-                    </div >
-                        : <h2 className={style.Loading}>Loading...</h2>
+                            <h5 className={style.Cont}> Continent: {details.continent}</h5>
+                            <h5 className={style.Cap}> Capital: {details.capital}</h5>
+                            <h5 className={style.subregion}> Subregion: {details.subregion}</h5>
+                            <h5 className={style.area}> Area: {details.area} km2</h5>
+                            <h5 className={style.poblation}> Poblation: {details.poblation} km2</h5>
+                        </div >
+                            : <h2 className={style.Loading}>Loading...</h2>
 
                     }
 
