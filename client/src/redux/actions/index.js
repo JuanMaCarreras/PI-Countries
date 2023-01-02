@@ -4,7 +4,7 @@ import {
     SEARCH_COUNTRY,
     POST_ACTIVITY,
     GET_DETAILS,
-    FILTER_BY_ARCTIVITY,
+    FILTER_BY_ACTIVITY,
     FILTER_BY_CONTINENT,
     SORT_COUNTRIES_BY_ALPH,
     SORT_COUNTRIES_BY_POBLATION
@@ -45,7 +45,7 @@ export const getDetails = (id) => {
 
 export const filterCountryByActivity = (name) => {
     return async (dispatch) => {
-        return dispatch({ type: FILTER_BY_ARCTIVITY, payload: name })
+        return dispatch({ type: FILTER_BY_ACTIVITY, payload: name })
     }
 
 };
@@ -68,3 +68,28 @@ export const sortCountryByAlph = (order) => {
         return dispatch({ type: SORT_COUNTRIES_BY_ALPH, payload: order })
     }
 };
+
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+export function createActivity(activity) {
+    return async function () {
+        try {
+            const newAct = await axios.post("http://localhost:3001/activities", activity);
+            console.log(newAct);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+}
