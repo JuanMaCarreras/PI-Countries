@@ -72,7 +72,7 @@ const rootReducer = (state = initialState, action) => {
             }) : state.countries.sort((a, b) => {
                 if (a.name > b.name) return -1
                 if (a.name < b.name) return 1
-                return 0
+                else return 0
             })
 
             return {
@@ -83,14 +83,13 @@ const rootReducer = (state = initialState, action) => {
 
         case SORT_COUNTRIES_BY_POBLATION: {
             const orderPoblation = action.payload === 'as' ? state.countries.sort((a, b) => {
-                if (a.poblation > b.poblation) return 1
-                if (a.poblation < b.poblation) return -1
-                return 0
-
-            }) : state.countries.sort((a, b) => {
                 if (a.poblation > b.poblation) return -1
                 if (a.poblation < b.poblation) return 1
                 return 0
+            }) : state.countries.sort((a, b) => {
+                if (a.poblation > b.poblation) return 1
+                if (a.poblation < b.poblation) return -1
+                else return 0
             })
 
             return {
