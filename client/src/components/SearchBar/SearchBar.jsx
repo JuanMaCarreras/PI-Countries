@@ -1,47 +1,57 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import style from './SearchBar.module.css'
 import { useDispatch } from 'react-redux'
 import { searchCountry } from '../../redux/actions/index'
 
 
-function SearchBar() {
+function SearchBar({ setCurrentPage }) {
+
     const dispatch = useDispatch()
 
-    const [input, setInput] = useState('')
+    const [search, setSearch] = useState('')
 
-    const inputHandler = (e) => {
-        setInput(e.target.value)
 
-    }
+    const handlerChange = (e) => {
 
-    const clickHandler = () => {
-
-        dispatch(searchCountry(input))
+        setSearch(e.target.value)
     }
 
 
+
+    const handlerSubmit = (e) => {
+        e.preventDefault()
+
+        dispatch(searchCountry(search))
+        setSearch('')
+        setCurrentPage(1)
+
+    }
 
     return (
         <>
-            <div className={style.searchBar}>
-                <div>
+            <div className={style.searchBarContainer}>
+
+                <div className={style.titleContainer}>
+                    <h1 className={style.title}>Henry Countries</h1>
+                </div>
+
+                <form className={style.formContainer} onSubmit={handlerSubmit}>
+
                     <input className={style.input}
-                        type="text"
-                        placeholder='Search... '
-                        name='input'
-                        onChange={e => inputHandler(e)}
+                        type='text'
+                        value={search}
+                        onChange={handlerChange}
+                        placeholder='Country...'
                     />
-                </div>
 
-                <div>
-                    <button className={style.btnInput}
-                        onClick={() => clickHandler()}
+                    <buttom className={style.btn}
+                        type='submit'
+                        value='Search'
 
-                    >
-                        Search
-                    </button>
-                </div>
+                    > <ion-icon name="search-outline" />
+                    </buttom>
 
+                </form>
             </div>
         </>
 

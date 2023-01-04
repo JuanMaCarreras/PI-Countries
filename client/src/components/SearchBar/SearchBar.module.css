@@ -1,0 +1,53 @@
+.searchBarContainer {
+    padding: 25px;
+    background-color: #0f120f;
+
+}
+
+.formContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    display: flex;
+    cursor: pointer;
+    border-radius: 0px 1.4rem 1.4rem 0px;
+    color: #ffffff;
+    border: 2px solid #4d4d4d;
+    padding: .3rem;
+    border-left: 1px;
+    width: 1.5rem;
+    align-items: center;
+    padding-left: .6rem;
+
+}
+
+.btn:hover {
+    background-color: #404040;
+
+}
+
+.input {
+    border-radius: 1.4rem 0px 0px 1.4rem;
+    border: 2px solid #4d4d4d;
+    width: 235px;
+    height: 30px;
+    padding-left: 1rem;
+    background-color: transparent;
+    color: rgb(236, 230, 230);
+    outline: none;
+}
+
+ion-icon {
+    font-size: 1.2rem;
+    color: #15b300;
+}
+
+.title {
+    float: left;
+    color: rgb(236, 230, 230);
+    margin-top: .1rem;
+
+
+}
