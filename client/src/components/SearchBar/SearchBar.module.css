@@ -50,6 +50,5 @@ ion-icon {
     float: left;
     color: rgb(236, 230, 230);
     margin-top: .1rem;
-
-
+    border-bottom: solid #15b300 1px;
 }
