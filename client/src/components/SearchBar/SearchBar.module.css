@@ -1,6 +1,7 @@
 .searchBarContainer {
     padding: 25px;
     background-color: #0f120f;
+    padding-bottom: .1rem;
 
 }
 
@@ -24,7 +25,8 @@
 }
 
 .btn:hover {
-    background-color: #404040;
+    transition: 1s;
+    background-color: #242424;
 
 }
 
