@@ -1,0 +1,55 @@
+.mainContainer {
+    background-color: #0f120f;
+}
+
+.linkActivity {
+    color: #ffffff;
+    float: right;
+    padding-right: 3rem;
+    margin-top: 1.5rem;
+}
+
+.optionsContainer {
+    border-bottom: solid 1rem transparent;
+    display: flex;
+    flex-direction: row;
+    width: 60rem;
+    border-left: solid 1rem transparent;
+}
+
+.container {
+    display: flex;
+    margin-left: 1rem;
+
+}
+
+.select {
+    cursor: pointer;
+    border: solid 2px transparent;
+    border-radius: 1.4rem;
+    color: #ffffff;
+    padding: .2rem;
+    background-color: transparent;
+    padding-left: 10px;
+    outline: none;
+}
+
+.select:hover {
+    transition: 1s;
+    border: solid 2px #242424;
+    border-radius: 1.4rem;
+    color: #c6c4c4;
+    padding: .2rem;
+    background-color: #242424;
+    padding-left: 10px;
+    outline: none;
+
+}
+
+
+
+.reset {
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
