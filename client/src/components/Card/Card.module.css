@@ -1,0 +1,39 @@
+.cardContainer {
+    background: transparent;
+    border-radius: 10px;
+    width: 230px;
+    height: 280px;
+    border: 2px solid #0f7402;
+    padding: 2px;
+    margin: 5px;
+}
+
+.cardContainer:hover {
+    transition: 1s;
+    border: 2px solid #15b300;
+    background-color: #242424;
+}
+
+
+.cardContainer img {
+    border-radius: 5%;
+    width: 220px;
+    height: 120px;
+
+}
+
+.cardName {
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.cardContinent {
+    text-align: center;
+    margin: 35px;
+    color: #ffffff;
+}
+
+.link {
+    text-decoration: none;
+}
