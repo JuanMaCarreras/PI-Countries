@@ -3,7 +3,7 @@ import style from './Form.module.css'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createActivity, postActivity } from '../../redux/actions'
-
+import { Link } from 'react-router-dom'
 
 
 const validate = (input) => {
@@ -79,6 +79,11 @@ function Form() {
 
     return (
         <>
+            <Link to='/'>
+                <button className={style.btnBack}>
+                    <ion-icon name="globe-outline" />
+                </button>
+            </Link>
 
             <div className={style.fromContainer}>
                 <h2 className={style.title}> Create Activity</h2>
