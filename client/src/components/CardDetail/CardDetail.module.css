@@ -1,0 +1,70 @@
+.Container img {
+    border-radius: 10px;
+    color: rgb(1, 0, 0);
+    width: 500px;
+    height: 300px;
+    padding: 3px;
+    margin-left: 13px;
+    float: left;
+    margin-right: 1rem;
+    border-left: #15b300 solid 2px;
+    border-bottom: #15b300 solid 2px;
+    border-right: #0f7402 solid 2px;
+    border-top: #0f7402 solid 2px;
+}
+
+.name {
+    display: flex;
+    margin-left: 23px;
+    color: #ffffff;
+
+
+}
+
+span {
+    padding-right: .4rem;
+    color: #139704;
+
+}
+
+.data {
+    display: flex;
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    padding: .3rem;
+    margin: 1rem;
+    margin-left: 3rem;
+    border: solid .4rem transparent;
+    color: #c6c4c4;
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+
+}
+
+.btn:hover {
+    transition: 1s;
+    border-radius: 20px;
+    border: solid .4rem #242424;
+    color: #c6c4c4;
+    background-color: #242424;
+    outline: none;
+
+}
+
+.Loading {
+    color: #0f7402;
+}
+
+.noActivity {
+    display: flex;
+    padding: 1.3rem;
+    color: #ffffff;
+}
