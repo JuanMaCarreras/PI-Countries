@@ -14,7 +14,7 @@ function App() {
       <Route exact path={'/'} component={Landing} />
       <Route exact path={'/home'} component={Home} />
       <Route exact path={'/countries/:id'} component={CardDetail} />
-      <Route exact path={'/home/create'} component={Form} />
+      <Route exact path={'/form/create'} component={Form} />
 
     </div>
   );
