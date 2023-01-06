@@ -1,0 +1,116 @@
+.fromContainer {
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+
+}
+
+.labelForm {
+    display: flex;
+    margin: 1.1rem;
+    color: #ffffff;
+}
+
+.input {
+    border-radius: 1.4rem;
+    border: 2px solid #4d4d4d;
+    width: 23rem;
+    height: 30px;
+    padding-left: 1rem;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.input:hover {
+    transition: 2s;
+    background-color: #1f1f1f;
+    outline: none;
+}
+
+.warning {
+    transform: 2s;
+    color: #f00505
+}
+
+.seasonSel {
+    cursor: pointer;
+    border-radius: 1.4rem;
+    color: #ffffff;
+    width: 24rem;
+    height: 35px;
+    padding-left: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #4d4d4d;
+}
+
+.seasonSel:hover {
+    transition: 1s;
+    border: solid 2px #242424;
+    border-radius: 1.4rem;
+    color: #c6c4c4;
+    padding: .2rem;
+    background-color: #1f1f1f;
+    padding-left: 10px;
+    outline: none;
+
+}
+
+.btn {
+    margin-top: 3rem;
+    border-radius: 1.4rem;
+    border: 2px solid #4d4d4d;
+    width: 24rem;
+    height: 30px;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    transition: 2s;
+    background-color: #1f1f1f;
+    outline: none;
+}
+
+
+.containerActivity {
+    display: flex;
+    text-align: left;
+}
+
+.btnBack {
+    cursor: pointer;
+    display: flex;
+    padding: .3rem;
+    margin: 1rem;
+    margin-left: 3rem;
+    border: solid .4rem transparent;
+    color: #c6c4c4;
+    background-color: transparent;
+    outline: none;
+}
+
+.btnBack:hover {
+    transition: 1s;
+    border-radius: 20px;
+    border: solid .4rem #242424;
+    color: #c6c4c4;
+    background-color: #242424;
+    outline: none;
+
+}
