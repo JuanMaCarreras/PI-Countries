@@ -11,7 +11,7 @@ function landing() {
                 <h1 className={style.title}>Henry Coutries</h1>
 
                 <Link to='/home'>
-                    <button className={style.btn}>Entrar</button>
+                    <button className={style.btn}>See the World</button>
                 </Link>
             </div>
 

@@ -7,16 +7,16 @@
 }
 
 .title {
-    color: rgb(191, 191, 191);
-    -webkit-text-stroke: 1px rgb(30, 30, 30);
+    color: #ffffff;
+    -webkit-text-stroke: 1px rgb(45, 45, 45);
 }
 
 .btn {
-    color: rgb(191, 191, 191);
-    border-color: rgb(191, 191, 191);
+    cursor: pointer;
+    color: #ffffff;
+    border-color: #15b300;
     background-color: transparent;
     font-size: 25px;
     border-radius: 8px;
-    transition: transform 2s ease;
     margin-top: 450px;
 }
