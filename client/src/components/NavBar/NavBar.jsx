@@ -59,11 +59,6 @@ function NavBar({ setCurrentPage, setOrder }) {
                     <h4 className={style.linkActivity}>Create Activity</h4>
                 </Link>
 
-                {/* <h2 onClick={() => {
-                    dispatch(getCountries()) // reset
-                    setCurrentPage(1)
-                }}>Henry Countries</h2> */}
-
                 <div className={style.mainContainer2}>
                     <div className={style.optionsContainer}>
                         <div className={style.container}>
