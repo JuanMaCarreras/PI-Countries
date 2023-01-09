@@ -7,7 +7,7 @@ const createActivity = async (req, res) => {
 
     try {
 
-        const countryFound = await Country.findAll({
+        const countryFound = await Country.findOne({
             where: {
                 id: countryid
             }
@@ -20,7 +20,7 @@ const createActivity = async (req, res) => {
             season,
         })
 
-        resActivity.addCountry(countryFound)
+        await resActivity.addCountry(countryFound)
 
         res.status(200).send('activity created successfully')
 
@@ -35,6 +35,31 @@ const createActivity = async (req, res) => {
 };
 
 
+
+const getActivities = async (req, res) => {
+
+    console.log('all')
+
+    try {
+
+        const activities = await Activity.findAll({ include: Country })
+
+        res.json(activities)
+
+    } catch (error) {
+
+        res.send(error)
+    }
+
+
+};
+
+
+
+
+
+
 module.exports = {
     createActivity,
+    getActivities,
 };
