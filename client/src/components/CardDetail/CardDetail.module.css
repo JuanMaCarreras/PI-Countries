@@ -68,3 +68,12 @@ span {
     padding: 1.3rem;
     color: #ffffff;
 }
+
+
+.dataAct {
+    display: flex;
+    color: #ffffff;
+    margin-left: 2rem;
+    margin-top: 2rem;
+
+}
