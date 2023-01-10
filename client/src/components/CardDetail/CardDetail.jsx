@@ -57,15 +57,18 @@ function CardDetail() {
 
                     {
                         details ?
-                            <div className={style.containerActivity}>
-                                <h4 className={style.dataAct}> <span> Activity: </span> {details.activities[0].name} </h4>
-                                <h4 className={style.dataAct}> <span> Difficulty: </span> {details.activities[0].difficulty} </h4>
-                                <h4 className={style.dataAct}> <span> Duration:  </span> {details.activities[0].duration} horas</h4>
-                                <h4 className={style.dataAct}> <span> Season: </span>{details.activities[0].season} </h4>
-                            </div>
+                            details.activities[0] ?
+                                <div className={style.containerActivity}>
+                                    <h4 className={style.dataAct}> <span> Activity: </span> {details.activities[0].name} </h4>
+                                    <h4 className={style.dataAct}> <span> Difficulty: </span> {details.activities[0].difficulty} </h4>
+                                    <h4 className={style.dataAct}> <span> Duration:  </span> {details.activities[0].duration} horas</h4>
+                                    <h4 className={style.dataAct}> <span> Season: </span>{details.activities[0].season} </h4>
+                                </div>
 
+                                :
+                                <h3 className={style.noActivity}>Activities not Found</h3>
                             :
-                            <h3 className={style.noActivity}>Activities not Found</h3>
+                            <h3>Loading...</h3>
 
                     }
                 </div>
