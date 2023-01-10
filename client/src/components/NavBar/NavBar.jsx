@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import style from './NavBar.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import { Link } from 'react-router-dom'
@@ -7,7 +8,8 @@ import {
     filterCountryByContinent,
     sortCountryByPoblation,
     sortCountryByAlph,
-    getCountries
+    getCountries,
+    getActivity
 } from '../../redux/actions/index'
 
 function NavBar({ setCurrentPage, setOrder }) {
@@ -16,6 +18,11 @@ function NavBar({ setCurrentPage, setOrder }) {
 
     const allContinents = useSelector(state => state.continents);
     const activities = useSelector(state => state.activities)
+
+
+    useEffect(() => {
+        dispatch(getActivity())
+    }, [dispatch])
 
 
     const handleOrderAlphabetical = (e) => {
@@ -44,6 +51,8 @@ function NavBar({ setCurrentPage, setOrder }) {
     const handlefilteredByActivity = (e) => {
         e.preventDefault();
         dispatch(filterCountryByActivity(e.target.value))
+
+
 
         setCurrentPage(1)
         setOrder(e.target.value)
@@ -102,7 +111,9 @@ function NavBar({ setCurrentPage, setOrder }) {
 
                                 <option value='all'>Activities</option>
                                 {
-                                    activities.length && activities.map((a) => (<option value={a}>{a}</option>))
+                                    activities.map((act) => (
+                                        <option value={act.name}>{act.name}</option>
+                                    ))
                                 }
 
                             </select>
