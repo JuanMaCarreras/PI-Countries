@@ -1,9 +1,41 @@
 .container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
 }
 
 .btnPag {
+    justify-content: center;
+    cursor: pointer;
+    border: solid .4rem transparent;
+    color: #ffffff;
+    border-radius: 100%;
+    background-color: transparent;
+    outline: none;
+    font-size: 13px;
+    padding: 4px;
+    margin: 3px;
+}
+
+.btnPag:hover {
+    transition: 1s;
+    border: solid .4rem #242424;
+    color: #c6c4c4;
+    background-color: #242424;
+    outline: none;
+
+}
+
+
+
+
+
+/* viejos botones */
+
+/* .btnPag {
     justify-content: center;
     cursor: pointer;
     border: solid .4rem transparent;
@@ -31,4 +63,4 @@
     color: rgb(255, 255, 255);
     padding: 5px;
     border: solid 2px #15b300;
-}
+} */
