@@ -55,6 +55,8 @@ function Form() {
 
 
     const handleInputChange = (e) => {
+        e.preventDefault();
+
         setInput({
             ...input,
             [e.target.name]: e.target.value
@@ -72,14 +74,14 @@ function Form() {
 
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         dispatch(createActivity(input))
     }
 
     return (
         <>
-            <Link to='/'>
+            <Link to='/home'>
                 <button className={style.btnBack}>
                     <ion-icon name="globe-outline" />
                 </button>
@@ -87,8 +89,6 @@ function Form() {
 
             <div className={style.fromContainer}>
                 <h2 className={style.title}> Create Activity</h2>
-
-
 
                 <form className={style.form} onChange={handleSubmit} >
 
