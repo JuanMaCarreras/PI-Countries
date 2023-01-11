@@ -1,8 +1,8 @@
 // import axios from 'axios'
 import style from './Form.module.css'
-import { useEffect, useState } from 'react'
+import { /*useEffect,*/ useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createActivity, postActivity } from '../../redux/actions'
+import { createActivity, } from '../../redux/actions'
 import { Link } from 'react-router-dom'
 
 
@@ -46,11 +46,11 @@ function Form() {
     const [error, setError] = useState({})
 
     const [input, setInput] = useState({
-        name: '',
-        difficulty: '',
-        duration: '',
-        season: '',
-        countryid: ''
+        name: "",
+        difficulty: "",
+        duration: "",
+        season: "",
+        countryid: "",
     })
 
 
@@ -68,9 +68,9 @@ function Form() {
 
     }
 
-    useEffect(() => {
-        dispatch(postActivity(input))
-    }, [dispatch, input])
+    // useEffect(() => {
+    //     dispatch(postActivity(input))
+    // }, [dispatch, input])
 
 
     const handleSubmit = (e) => {
