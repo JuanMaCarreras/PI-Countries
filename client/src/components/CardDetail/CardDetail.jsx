@@ -68,7 +68,7 @@ function CardDetail() {
                                 :
                                 <h3 className={style.noActivity}>Activities not Found</h3>
                             :
-                            <h3>Loading...</h3>
+                            <h3 className={style.loa}>Loading...</h3>
 
                     }
                 </div>
