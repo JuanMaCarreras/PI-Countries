@@ -1,12 +1,13 @@
 import {
     GET_COUNTRIES,
     SEARCH_COUNTRY,
-    POST_ACTIVITY,
+    // POST_ACTIVITY,
     GET_DETAILS,
     FILTER_BY_ACTIVITY,
     FILTER_BY_CONTINENT,
     SORT_COUNTRIES_BY_ALPH,
-    SORT_COUNTRIES_BY_POBLATION
+    SORT_COUNTRIES_BY_POBLATION,
+    GET_ACTIVITIES
 } from '../actions/types'
 
 const initialState = {
@@ -34,12 +35,19 @@ const rootReducer = (state = initialState, action) => {
             }
         }
 
-        case POST_ACTIVITY: {
+        case GET_ACTIVITIES:
             return {
                 ...state,
-                activities: [...state.activities, action.payload]
+                activities: action.payload,
             }
-        }
+
+
+        // case POST_ACTIVITY: {
+        //     return {
+        //         ...state,
+        //         activities: [...state.activities, action.payload]
+        //     }
+        // }
 
         case GET_DETAILS: {
             return {
