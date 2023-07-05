@@ -15,12 +15,24 @@ function Home() {
     const [currentPage, setCurrentPage] = useState(1)
     const countriesPerPage = 10
 
-    const allCountries = useSelector(state => state.countries)
+    const allCountries = useSelector(state => state.allCountries)
+    const filtro = useSelector(state => state.contries)
 
+    console.log(allCountries)
+    console.log(filtro)
+
+    // useEffect(() => {
+    //     if (allCountries.length > filtro.length) {
+    //         dispatch(getCountries())
+    //     }
+
+    // }, [dispatch])
 
     useEffect(() => {
-        dispatch(getCountries())
-    }, [dispatch])
+        if (allCountries.length !== filtro.length) {
+          dispatch(getCountries());
+        }
+      }, [allCountries.length, filtro.length, dispatch]);
 
 
     const lastPage = currentPage * countriesPerPage
