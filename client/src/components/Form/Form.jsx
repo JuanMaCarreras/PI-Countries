@@ -1,93 +1,97 @@
 // import axios from 'axios'
 import style from './Form.module.css'
-import { /*useEffect,*/ useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { createActivity, } from '../../redux/actions'
+// import { /*useEffect,*/ useState } from 'react'
+// import { useDispatch } from 'react-redux'
+// import { createActivity, } from '../../redux/actions'
 import { Link } from 'react-router-dom'
+import error from  './error.jpg'
 
 
-const validate = (input) => {
-    let error = {};
+// const validate = (input) => {
+//     let error = {};
 
-    if (!input.name) {
-        error.name = 'Name require'
-    } else if (/[0-9]/.test(input.name)) {
-        error.name = 'Nombre invalid'
-
-
-    } else if (!input.difficulty) {
-        error.difficulty = 'You must enter a difficulty'
+//     if (!input.name) {
+//         error.name = 'Name require'
+//     } else if (/[0-9]/.test(input.name)) {
+//         error.name = 'Nombre invalid'
 
 
-    } else if (!input.duration) {
-        error.duration = 'You must enter a duration'
-    } else if (!/\d/.test(input.duration)) {
-        error.duration = 'must be a number'
-    } else if (input.duration < 1 || input.duration > 24) {
-        error.duration = 'Must be a number between 1 and 24'
+//     } else if (!input.difficulty) {
+//         error.difficulty = 'You must enter a difficulty'
 
-    } else if (!input.season) {
-        error.season = 'You must enter a duration season'
 
-    } else if (!input.countryid) {
-        error.countryid = 'You must enter a country code'
-    } else if (!/^[A-Z]{3}$/.test(input.countryid)) {
-        error.countryid = 'Must be a valid code'
-    }
+//     } else if (!input.duration) {
+//         error.duration = 'You must enter a duration'
+//     } else if (!/\d/.test(input.duration)) {
+//         error.duration = 'must be a number'
+//     } else if (input.duration < 1 || input.duration > 24) {
+//         error.duration = 'Must be a number between 1 and 24'
 
-    return error;
-}
+//     } else if (!input.season) {
+//         error.season = 'You must enter a duration season'
+
+//     } else if (!input.countryid) {
+//         error.countryid = 'You must enter a country code'
+//     } else if (!/^[A-Z]{3}$/.test(input.countryid)) {
+//         error.countryid = 'Must be a valid code'
+//     }
+
+//     return error;
+// }
 
 
 function Form() {
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    const [error, setError] = useState({})
+    // const [error, setError] = useState({})
 
-    const [input, setInput] = useState({
-        name: "",
-        difficulty: "",
-        duration: "",
-        season: "",
-        countryid: "",
-    })
+    // const [input, setInput] = useState({
+    //     name: "",
+    //     difficulty: "",
+    //     duration: "",
+    //     season: "",
+    //     countryid: "",
+    // })
 
 
-    const handleInputChange = (e) => {
-        e.preventDefault();
+    // const handleInputChange = (e) => {
+    //     e.preventDefault();
 
-        setInput({
-            ...input,
-            [e.target.name]: e.target.value
+    //     setInput({
+    //         ...input,
+    //         [e.target.name]: e.target.value
 
-        });
+    //     });
 
-        let errors = validate({ ...input, [e.target.name]: e.target.value })
-        setError(errors)
+    //     let errors = validate({ ...input, [e.target.name]: e.target.value })
+    //     setError(errors)
 
-    }
+    // }
 
     // useEffect(() => {
     //     dispatch(postActivity(input))
     // }, [dispatch, input])
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        dispatch(createActivity(input))
-    }
+    //     dispatch(createActivity(input))
+    // }
 
     return (
         <>
             <Link to='/home'>
                 <button className={style.btnBack}>
-                    <ion-icon name="globe-outline" />
+                  <ion-icon name="arrow-back-outline"/>
                 </button>
             </Link>
 
-            <div className={style.fromContainer}>
+            <img src={error} alt='img error' />
+
+
+            {/* <div className={style.fromContainer}>
                 <h2 className={style.title}> Create Activity</h2>
 
                 <form className={style.form} onChange={handleSubmit} >
@@ -170,7 +174,7 @@ function Form() {
                     }
                 </form>
 
-            </div>
+            </div> */}
 
         </>
     )
