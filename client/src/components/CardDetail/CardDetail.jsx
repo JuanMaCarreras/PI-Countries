@@ -33,11 +33,11 @@ function CardDetail() {
 
                             <Link to='/home'>
                                 <button className={style.btn}>
-                                    <ion-icon name="globe-outline" />
+                                  <ion-icon name="arrow-back-outline"/>
                                 </button>
                             </Link>
 
-                            <h1 className={style.name}> <span> Name: </span> {details.name}</h1>
+                            <h1 className={style.name}> <span>Name:  </span> {details.name}</h1>
 
                             <div className={style.Container}>
                                 <img src={details.flag} alt="img not found" />

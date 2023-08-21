@@ -4,9 +4,9 @@
     width: 500px;
     height: 300px;
     padding: 3px;
-    margin-left: 13px;
+    margin-left: 5rem;
     float: left;
-    margin-right: 1rem;
+    margin-right: 2rem;
     border-left: #15b300 solid 2px;
     border-bottom: #15b300 solid 2px;
     border-right: #0f7402 solid 2px;
@@ -15,7 +15,7 @@
 
 .name {
     display: flex;
-    margin-left: 23px;
+    margin-left: 9rem;
     color: #ffffff;
 
 
@@ -61,12 +61,14 @@ span {
 
 .Loading {
     color: #0f7402;
+    margin-top: 10rem;
 }
 
 .noActivity {
     display: flex;
     padding: 1.3rem;
     color: #ffffff;
+    margin-left: 6rem;
 }
 
 
