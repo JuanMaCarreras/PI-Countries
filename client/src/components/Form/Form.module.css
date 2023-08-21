@@ -8,6 +8,10 @@
     margin-bottom: 4rem;
 
 }
+img{
+    width: 80%;
+    
+}
 
 .form {
     display: flex;

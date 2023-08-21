@@ -1,7 +1,9 @@
 import style from './Paginado.module.css'
 
 
-function Paginado({ countriesPerPage, allCountries, paginado, currentPage, firstPage }) {
+function Paginado({ countriesPerPage, allCountries, paginado, currentPage}) {
+
+    
 
     const numPage = []
 
@@ -14,29 +16,45 @@ function Paginado({ countriesPerPage, allCountries, paginado, currentPage, first
         <>
             <div className={style.container}>
 
+                {
+                    currentPage > 1 && (
+                        <button className={style.btnPag} 
+                            onClick={() => {
+                                paginado(currentPage - 1);
+                            }}
+                        ><ion-icon name='chevron-back-outline' /></button>)
+                }
 
-                {/* {
-                    numPage.map(p => <button className={currentPage === p ? style.btn2 : style.btnPag}
-                        key={p}
-                        onClick={() => paginado(p)} >{p}</button>)
-                } */}
+                {
+                    currentPage > 1 && (
+                        <button className={style.btnPag} 
+                            onClick={() => {
+                                paginado(currentPage - 1);
+                            }}
+                        >{currentPage - 1}</button>)
+                }
 
-                <div className={style.btnPag}
-                    onClick={() => {
-                        if (currentPage > 1)
-                            paginado(currentPage - 1)
-                    }} >{<ion-icon name='chevron-back-outline' />}</div>
+                <button className={style.currentPag} >{currentPage}</button>
 
-                <div className={style.btnPag} >{currentPage}</div>
+                {
+                    currentPage < numPage.length && currentPage > 0 && (
+                        <button className={style.btnPag} 
+                            onClick={() => {
+                                paginado(currentPage + 1);
+                            }}>{currentPage + 1}</button>)
 
-                <div className={style.btnPag}
-                    onClick={() => {
-                        if (currentPage < allCountries) paginado(currentPage + 1)
-                    }}
-                >
-                    <ion-icon name='chevron-forward-outline' />
-                </div>
+                }
 
+                {
+                    currentPage < numPage.length && currentPage > 0 && (
+                   
+                        <button className={style.btnPag}
+                            onClick={() => {
+                                paginado(currentPage + 1)
+                            }}
+                        > <ion-icon name='chevron-forward-outline' /> </button>)
+
+                }
             </div>
         </>
     )

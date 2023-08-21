@@ -18,9 +18,6 @@ function Home() {
     const allCountries = useSelector(state => state.allCountries)
     const filtro = useSelector(state => state.contries)
 
-    console.log(allCountries)
-    console.log(filtro)
-
     // useEffect(() => {
     //     if (allCountries.length > filtro.length) {
     //         dispatch(getCountries())
@@ -28,11 +25,16 @@ function Home() {
 
     // }, [dispatch])
 
+    // useEffect(() => {
+    //     if (allCountries.length !== filtro.length) {
+    //       dispatch(getCountries());
+    //     }
+    //   }, [allCountries, filtro, dispatch]);
+
     useEffect(() => {
-        if (allCountries.length !== filtro.length) {
           dispatch(getCountries());
-        }
-      }, [allCountries.length, filtro.length, dispatch]);
+       
+      }, [ dispatch]);
 
 
     const lastPage = currentPage * countriesPerPage
